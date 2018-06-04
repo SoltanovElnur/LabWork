@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <script>
+            if (localStorage.User != null) {
+                let person = JSON.parse(localStorage.User);
+                document.write(person.name);
+            }
+        </script>
+        <button onclick="logout();">Logout</button>
+        <button onclick="sell();">Sell</button>
+    </p>
+    
+    <script src="js/main.js"></script>
+    <script>
+    
+    let q = JSON.parse(localStorage.Adds)
+    for(o of q){
+        let newpro=new Product(o.name, o.model, o.price, o.color);
+        products.push(newpro);
+    }
+    
+    </script>
+     
+     <script>
+         if (localStorage.User != null) {
+             create();
+         } else {
+             location.href = "index.html"
+         } 
+     </script>
+</body>
+
+</html>
